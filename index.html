@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./scripts/style.css">
+    <!-- Google fonts stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fredoka:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Concentration</title>
+    <link rel="stylesheet" href="./scripts/style.css">
+</head>
+
+<body>
+    <div class="bigDiv">
+        <div class="heading">
+            <h1 align="center" ;>Concentration</h1>
+            <!-- Game play description div -->
+            <div class="description">
+                <h3><center>How to play! </center></h3>
+                <p>1.  Step one, click a card and find a match!</p>
+                <p>2.  Once a match is made, you get a chance to guess the hidden puzzle! </p>
+                <p>3. Try to solve the puzzle in he shortest time possible</p>
+            </div>
+        </div>
+        
+        <div id="winOverlay" class="winModal__overlay">
+            <div id="winModal" class="winModal__content">
+                <h2>You won! Nice job!</h2>
+            </div>
+        </div>
+        <!-- This will grey out background when modal populates -->
+        <div id="overlay" class="modal__overlay">
+            <div id="modal" class="modal__content">
+                <p> You got a match! Here's your chance to guess the puzzle! </p>
+                <input id='userInput' />
+                <div class="guessButtons">
+                    <button onclick="validateAnswer()">Guess</button>
+                    <button onclick="toggleModal()">Pass</button>
+                </div>
+                <p id="gameResponse"></p>
+            </div>
+        </div>
+        <div class="game" "background-size: 100%;">
+            <div class="board-container">
+                <div class="board" data-dimension="4"></div>
+
+                <div class="controls">
+                    <button>Start</button></div>
+                    <div class="stats">
+                        <div class="moves">0 moves</div> <div class="timer">time: 0 sec</div>
+                </div>
+                <div class="board" data-dimension="4"></div>
+            </div>
+            <div id="theGuess"></div>
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
